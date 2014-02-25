@@ -52,9 +52,15 @@ function dataLoaded(UNEMPDATA){
 	//feed data to viz lib
 	var data = google.visualization.arrayToDataTable(myDataArray);
 	
+	
+	//create options object to actually customeize
+	var options = {
+          title: "Unemployment since 1980"
+        };
+
 	//figure out what type of chart i want
 	var myChart = new google.visualization.LineChart(document.getElementById("myChartDiv"));
-        myChart.draw(data);
+        myChart.draw(data,options);
 }
 
 function googleLoaded(){
